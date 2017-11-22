@@ -35,11 +35,7 @@ in
     psmisc
   ];
 
-  gtk = {
-    enable = true;
-    themeName = "Arc-Dark";
-    iconThemeName = "Numix-Square";
-  };
+  gtk = import ./programs-config/gtk.nix;
 
   programs.git = import ./programs-config/git.nix;
 
