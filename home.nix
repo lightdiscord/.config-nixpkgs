@@ -2,6 +2,7 @@
 
 let
   polybar = pkgs.polybar.override { i3GapsSupport = true; githubSupport = true; mpdSupport = true; };
+  neovim = pkgs.neovim.override { configure = (import ./neovim-config { inherit pkgs; }); };
 in
 {
   home.packages = with pkgs; [
