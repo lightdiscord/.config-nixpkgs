@@ -1,9 +1,3 @@
-{ stdenv, writeText }:
-
-let
-  generic = builtins.readFile ./.vim/general.vim;
-in
-
 ''
-  ${generic}
+  source ~/.config/nixpkgs/neovim-config/.vim/general.vim
 ''
