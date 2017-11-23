@@ -40,6 +40,8 @@ in
 
   programs.git = import ./programs-config/git.nix;
 
+  services.redshift = import ./services-config/redshift.nix;
+
   programs.home-manager = {
     enable = true;
     path = "https://github.com/rycee/home-manager/archive/master.tar.gz";
