@@ -10,12 +10,12 @@ in {
       colibri-vim
       gruvbox
 
-			# Languages
-			vim-javascript
-			vim-vue
-			rust-vim
-			vim-nix
-			vim-graphql
+      # Languages
+      vim-javascript
+      vim-vue
+      rust-vim
+      vim-nix
+      vim-graphql
     ];
     opt = [];
   };
