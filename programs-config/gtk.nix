@@ -1,5 +1,13 @@
+{ pkgs }: 
+
 {
   enable = true;
-  themeName = "Arc-Dark";
-  iconThemeName = "Numix-Square";
+  theme = {
+    package = pkgs.arc-theme;
+    name = "Arc-Dark";
+  };
+  iconTheme = {
+    package = pkgs.numix-icon-theme-square;
+    name = "Numix-Square";
+  };
 }

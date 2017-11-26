@@ -3,6 +3,7 @@
 let
   polybar = pkgs.polybar.override { i3GapsSupport = true; githubSupport = true; mpdSupport = true; };
   neovim = pkgs.neovim.override { configure = (import ./neovim-config { inherit pkgs; }); };
+  hyper = import ./hyper-config { inherit (pkgs) stdenv hyper fetchurl; };
 in
 {
   home.packages = with pkgs; [
@@ -10,7 +11,6 @@ in
     htop
     nodejs-9_x
     tmux
-    arc-theme
     git
     sshpass
     polybar
@@ -28,15 +28,13 @@ in
     unrar
     redshift
     pavucontrol
-
     firefox-devedition-bin
     compton
     lxappearance
-    numix-icon-theme-square
     psmisc
   ];
 
-  gtk = import ./programs-config/gtk.nix;
+  gtk = import ./programs-config/gtk.nix { inherit pkgs; };
 
   programs.git = import ./programs-config/git.nix;
 
