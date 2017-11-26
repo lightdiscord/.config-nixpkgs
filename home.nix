@@ -39,6 +39,7 @@ in
   programs.git = import ./programs-config/git.nix;
 
   services.redshift = import ./services-config/redshift.nix;
+  services.gpg-agent = import ./services-config/gpg-agent.nix;
 
   programs.home-manager = {
     enable = true;
