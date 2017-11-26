@@ -18,4 +18,4 @@ set shiftwidth=2
 set cursorcolumn
 set cursorline
 
-source ~/.config/nixpkgs/neovim-config/.vim/plugins/plugins.vim
+source /home/arnaud/.config/nixpkgs/neovim-config/.vim/plugins/plugins.vim

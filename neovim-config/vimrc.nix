@@ -1,3 +1,3 @@
 ''
-  source ~/.config/nixpkgs/neovim-config/.vim/general.vim
+  source /home/arnaud/.config/nixpkgs/neovim-config/.vim/general.vim
 ''
