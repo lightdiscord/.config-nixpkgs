@@ -44,4 +44,12 @@ in {
       sha256 = "079gl2yw7nr80hpd2kxrzj0qm2706p41g0plv6la1dxafavrpnrb";
     };
   };
+  vim-toml = build {
+    name = "vim-toml";
+    src = pkgs.fetchgit {
+      url = "https://github.com/cespare/vim-toml";
+      rev = "1fecb3a9d5a1c1bd0e24de7bb9329abb40bf4d30";
+      sha256 = "0f3v0rqxpf8v958nb9cx7192pm9m4y45b1r216sia4zramp54lfp";
+    };
+  };
 }

@@ -16,6 +16,7 @@ in {
       rust-vim
       vim-nix
       vim-graphql
+      vim-toml
     ];
     opt = [];
   };
