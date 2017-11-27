@@ -7,7 +7,7 @@
     name = "Arc-Dark";
   };
   iconTheme = {
-    package = pkgs.numix-icon-theme-square;
-    name = "Numix-Square";
+    package = pkgs.papirus-icon-theme;
+    name = "Papirus-Dark";
   };
 }

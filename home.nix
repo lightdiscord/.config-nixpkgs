@@ -26,7 +26,6 @@ in
     rustup
     unzip
     unrar
-    redshift
     pavucontrol
     firefox-devedition-bin
     compton
@@ -38,7 +37,6 @@ in
 
   programs.git = import ./programs-config/git.nix;
 
-  services.redshift = import ./services-config/redshift.nix;
   services.gpg-agent = import ./services-config/gpg-agent.nix;
 
   programs.home-manager = {
