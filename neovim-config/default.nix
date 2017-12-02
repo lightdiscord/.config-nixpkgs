@@ -17,6 +17,7 @@ in {
       vim-nix
       vim-graphql
       vim-toml
+      vim-fish
     ];
     opt = [];
   };

@@ -4,12 +4,13 @@ let
   polybar = pkgs.polybar.override { i3GapsSupport = true; githubSupport = true; mpdSupport = true; };
   neovim = pkgs.neovim.override { configure = (import ./neovim-config { inherit pkgs; }); };
   hyper = import ./hyper-config { inherit (pkgs) stdenv hyper fetchurl; };
+  python3 = pkgs.python36.withPackages (ps: [ ps.numpy ]);
+  python2 = pkgs.python27.withPackages (ps: [ ps.numpy ]);
 in
 {
   home.packages = with pkgs; [
     neovim
     htop
-    nodejs-9_x
     tmux
     git
     sshpass
@@ -23,7 +24,18 @@ in
     wget
     i3lock
     hyper
+
+    # Documentation
+    tldr
+
+    # Compilers & Runtimes
     rustup
+    nodejs-9_x
+    gcc
+    python3
+    python2
+    gnumake
+
     unzip
     unrar
     pavucontrol
@@ -31,6 +43,8 @@ in
     compton
     lxappearance
     psmisc
+    ffmpeg
+    gst-ffmpeg
   ];
 
   gtk = import ./programs-config/gtk.nix { inherit pkgs; };

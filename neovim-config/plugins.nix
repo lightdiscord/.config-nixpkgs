@@ -52,4 +52,12 @@ in {
       sha256 = "0f3v0rqxpf8v958nb9cx7192pm9m4y45b1r216sia4zramp54lfp";
     };
   };
+  vim-fish = build {
+    name = "vim-fish";
+    src = pkgs.fetchgit {
+      url = "https://github.com/dag/vim-fish";
+      rev = "50b95cbbcd09c046121367d49039710e9dc9c15f";
+      sha256 = "1yvjlm90alc4zsdsppkmsja33wsgm2q6kkn9dxn6xqwnq4jw5s7h";
+    };
+  };
 }
