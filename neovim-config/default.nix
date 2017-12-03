@@ -6,7 +6,13 @@ let
 in {
   packages.myVimPackage = with pkgs.vimPlugins // plugins; {
     start = [
+      # File tree
       nerdtree
+
+      # Utils
+      vim-easymotion
+
+      # Themes
       colibri-vim
       gruvbox
 

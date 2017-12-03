@@ -60,4 +60,12 @@ in {
       sha256 = "1yvjlm90alc4zsdsppkmsja33wsgm2q6kkn9dxn6xqwnq4jw5s7h";
     };
   };
+  vim-easymotion = build {
+    name = "vim-easymotion";
+    src = pkgs.fetchgit {
+      url = "https://github.com/easymotion/vim-easymotion";
+      rev = "342549e7a1e5b07a030803e0e4b6f0415aa51275";
+      sha256 = "1glv4s95v8xxj47n0jzjxd0pxphnnpgzyd384d2bh0ql1xgf320v";
+    };
+  };
 }
