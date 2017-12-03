@@ -6,6 +6,12 @@ let
   hyper = import ./hyper-config { inherit (pkgs) stdenv hyper fetchurl; };
   python3 = pkgs.python36.withPackages (ps: [ ps.numpy ]);
   python2 = pkgs.python27.withPackages (ps: [ ps.numpy ]);
+  flashplayer = pkgs.lib.overrideDerivation pkgs.flashplayer (old: {
+    src = pkgs.fetchurl {
+      url = "https://fpdownload.adobe.com/get/flashplayer/pdc/27.0.0.187/flash_player_npapi_linux.x86_64.tar.gz";
+      sha256 = "1hfcphcvdam62k983rm6r42mnkih4nfwyrnx0v88z3nw14mjr4c3";
+    };
+  });
 in
 {
   home.packages = with pkgs; [
@@ -40,11 +46,20 @@ in
     unrar
     pavucontrol
     firefox-devedition-bin
+    chromium
     compton
     lxappearance
     psmisc
     ffmpeg
     gst-ffmpeg
+    hal-flash
+    openh264
+    x264
+    flashplayer
+
+    # Image editor
+    gimp
+    inkscape
   ];
 
   gtk = import ./programs-config/gtk.nix { inherit pkgs; };
