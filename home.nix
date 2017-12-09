@@ -45,8 +45,15 @@ in
     unzip
     unrar
     pavucontrol
+    
+    # Browsers
     firefox-devedition-bin
     chromium
+    tor
+    torsocks
+    tor-arm
+    tor-browser-bundle-bin
+
     compton
     lxappearance
     psmisc
