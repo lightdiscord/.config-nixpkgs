@@ -29,7 +29,10 @@ in
     ponysay
     wget
     i3lock
+
+    # Terminal
     hyper
+    alacritty
 
     # Documentation
     tldr
