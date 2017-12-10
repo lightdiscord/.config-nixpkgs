@@ -8,9 +8,19 @@ in {
     start = [
       # File tree
       nerdtree
+      vim-nerdtree-tabs
+      vim-nerdtree-git-plugin
 
       # Utils
       vim-easymotion
+      vim-mru
+
+      # Git
+      vim-fugitive
+
+      # Airline
+      vim-airline
+      vim-airline-themes
 
       # Themes
       colibri-vim

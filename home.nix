@@ -18,7 +18,11 @@ in
     neovim
     htop
     tmux
+
+    # Git
     git
+    gitAndTools.gitflow
+
     sshpass
     polybar
     rofi
@@ -29,6 +33,9 @@ in
     ponysay
     wget
     i3lock
+
+    # Medias
+    vlc
 
     # Terminal
     hyper

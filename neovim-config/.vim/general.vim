@@ -7,7 +7,7 @@ set termguicolors
 colorscheme gruvbox
 set background=dark
 
-hi Normal guibg=NONE ctermbg=NONE
+" hi Normal guibg=NONE ctermbg=NONE
 
 set t_Co=256
 set relativenumber
@@ -19,3 +19,5 @@ set cursorcolumn
 set cursorline
 
 source /home/arnaud/.config/nixpkgs/neovim-config/.vim/plugins/plugins.vim
+
+color gruvbox

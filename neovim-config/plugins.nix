@@ -68,4 +68,52 @@ in {
       sha256 = "1glv4s95v8xxj47n0jzjxd0pxphnnpgzyd384d2bh0ql1xgf320v";
     };
   };
+  vim-mru = build {
+    name = "vim-mru";
+    src = pkgs.fetchgit {
+      url = "https://github.com/vim-scripts/mru.vim";
+      rev = "9f25db66393a6467fae0ac04ae6565e8471023c3";
+      sha256 = "1m1psfd1vlrwa256yq755rkbfyk6bs0di81z9p0i33z2wr125h4p";
+    };
+  };
+  vim-airline = build {
+    name = "vim-airline";
+    src = pkgs.fetchgit {
+      url = "https://github.com/vim-airline/vim-airline";
+      rev = "6c8d0f5e6af878db71b2dc44ccf1d1417381d6a0";
+      sha256 = "0azrapbb3w84c62kcbrycm75qmwdfz38852sv7cccwb7v1xgj9ab";
+    };
+  };
+  vim-airline-themes = build {
+    name = "vim-airline-themes";
+    src = pkgs.fetchgit {
+      url = "https://github.com/vim-airline/vim-airline-themes";
+      rev = "52dfa2b6c0dc2fd7a0e92954030893de3d173105";
+      sha256 = "0m65xmg259781r1wk8dz0d0diiayqyl1wahsb2fdqs369wwx4irr";
+    };
+  };
+  vim-nerdtree-tabs = build {
+    name = "vim-nerdtree-tabs";
+    src = pkgs.fetchgit {
+      url = "https://github.com/jistr/vim-nerdtree-tabs";
+      rev = "47bbe5afc26f701f08d31b2bbdb660f117367ded";
+      sha256 = "0a1gqdvmpa4gylnb7sxs6zr89i60fl16p477200x18hgh2zd2v02";
+    };
+  };
+  vim-nerdtree-git-plugin = build {
+    name = "vim-nerdtree-git-plugin";
+    src = pkgs.fetchgit {
+      url = "https://github.com/Xuyuanp/nerdtree-git-plugin";
+      rev = "6a9b3122cb89b3a45ec444f9787a895125aca8aa";
+      sha256 = "0yiyz81zqlccglclp3rmlb76sxpqy9alqbv8ih0hrvfpjx5hd8sy";
+    };
+  };
+  vim-fugitive = build {
+    name = "vim-fugitive";
+    src = pkgs.fetchgit {
+      url = "https://github.com/tpope/vim-fugitive";
+      rev = "5032d9ee72361dc3cfaae1a9b3353211203e443f";
+      sha256 = "1zx5l8lx7440l3pvs2bx81r3wmpvbmq7qs8ziz9lvlp91s7dqy88";
+    };
+  };
 }
