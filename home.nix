@@ -4,8 +4,8 @@ let
   polybar = pkgs.polybar.override { i3GapsSupport = true; githubSupport = true; mpdSupport = true; };
   neovim = pkgs.neovim.override { configure = (import ./neovim-config { inherit pkgs; }); };
   hyper = import ./hyper-config { inherit (pkgs) stdenv hyper fetchurl; };
-  python3 = pkgs.python36.withPackages (ps: [ ps.numpy ]);
-  python2 = pkgs.python27.withPackages (ps: [ ps.numpy ]);
+  python3 = pkgs.python36.withPackages (ps: [ ps.numpy ps.editorconfig ]);
+  python2 = pkgs.python27.withPackages (ps: [ ps.numpy ps.editorconfig ]);
   flashplayer = pkgs.lib.overrideDerivation pkgs.flashplayer (old: {
     src = pkgs.fetchurl {
       url = "https://fpdownload.adobe.com/get/flashplayer/pdc/27.0.0.187/flash_player_npapi_linux.x86_64.tar.gz";
@@ -73,6 +73,7 @@ in
     openh264
     x264
     flashplayer
+    editorconfig-core-c
 
     # Image editor
     gimp
