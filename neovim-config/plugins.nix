@@ -116,4 +116,36 @@ in {
       sha256 = "1zx5l8lx7440l3pvs2bx81r3wmpvbmq7qs8ziz9lvlp91s7dqy88";
     };
   };
+  vim-devicons = build {
+    name = "vim-devicons";
+    src = pkgs.fetchgit {
+      url = "https://github.com/ryanoasis/vim-devicons";
+      rev = "a3e50225a8d544c9eff9c53c5405269a1b2b29f8";
+      sha256 = "0glnwqnaw28g41zd9c3wvcsk6fmiphlwiq80lskbyn1pxfb3h14m";
+    };
+  };
+  vim-editorconfig = build {
+    name = "vim-editorconfig";
+    src = pkgs.fetchgit {
+      url = "https://github.com/editorconfig/editorconfig-vim";
+      rev = "0abb0634a8bf3c760a283e9e7475594b83869a46";
+      sha256 = "1wazl37ivn9nhsy296g1ncvvwc78930lbp8arhwavr52mzpfji21";
+    };
+  };
+  vim-jellybeans = build {
+    name = "vim-jellybeans";
+    src = pkgs.fetchgit {
+      url = "https://github.com/nanotech/jellybeans.vim";
+      rev = "36f4f82bd7749928ba4e61a58b2e76effb6ecd66";
+      sha256 = "11j7i4xqcy6z9r0phklrrdczkkzx30n4p8chqiasfyv64hyywv2f";
+    };
+  };
+  vim-nerdtree-syntax-highlight = build {
+    name = "vim-nerdtree-syntax-highlight";
+    src = pkgs.fetchgit {
+      url = "https://github.com/tiagofumo/vim-nerdtree-syntax-highlight";
+      rev = "30dcd52f2cda981555f2d83e1a9ff876e7715f49";
+      sha256 = "1fa41xdmx8n5h3hmd0ibrlh8ydf8s2m9jfpspwfqj7f1kdm1n157";
+    };
+  };
 }

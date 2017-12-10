@@ -10,10 +10,13 @@ in {
       nerdtree
       vim-nerdtree-tabs
       vim-nerdtree-git-plugin
+      vim-devicons
+      vim-nerdtree-syntax-highlight
 
       # Utils
       vim-easymotion
       vim-mru
+      vim-editorconfig
 
       # Git
       vim-fugitive
@@ -25,6 +28,7 @@ in {
       # Themes
       colibri-vim
       gruvbox
+      vim-jellybeans
 
       # Languages
       vim-javascript

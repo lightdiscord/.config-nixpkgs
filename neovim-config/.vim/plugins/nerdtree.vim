@@ -12,3 +12,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " Open NerdTREE on every tabs
 let g:nerdtree_tabs_open_on_console_startup=1
+
+" Remove Icons Padding
+let g:WebDevIconsNerdTreeAfterGlyphPadding = ''
