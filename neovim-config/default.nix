@@ -17,6 +17,7 @@ in {
       vim-easymotion
       vim-mru
       vim-editorconfig
+      vim-emmet
 
       # Git
       vim-fugitive

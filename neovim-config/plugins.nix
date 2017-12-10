@@ -148,4 +148,12 @@ in {
       sha256 = "1fa41xdmx8n5h3hmd0ibrlh8ydf8s2m9jfpspwfqj7f1kdm1n157";
     };
   };
+  vim-emmet = build {
+    name = "vim-emmet";
+    src = pkgs.fetchgit {
+      url = "https://github.com/mattn/emmet-vim";
+      rev = "350f0ba10b9ee65837fc5b04a993b14a7a10e5ac";
+      sha256 = "0439a3jd8v45nw6sl1gmhcz6w5ca5v2db0slahxg504zjs5jpivw";
+    };
+  };
 }
