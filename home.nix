@@ -12,6 +12,14 @@ let
       sha256 = "1hfcphcvdam62k983rm6r42mnkih4nfwyrnx0v88z3nw14mjr4c3";
     };
   });
+  discord = pkgs.lib.overrideDerivation pkgs.discord (old: {
+    version = "0.0.3";
+    name = "discord-0.0.3";
+    src = pkgs.fetchurl {
+      url = "https://dl.discordapp.net/apps/linux/0.0.3/discord-0.0.3.tar.gz";
+      sha256 = "1yxxy9q75zlgk1b4winw4zy9yxk5pn8x4camh52n6v3mw6gq0bfh";
+    };
+  });
 in
 {
   home.packages = with pkgs; [
@@ -22,6 +30,7 @@ in
     # Git
     git
     gitAndTools.gitflow
+    gitkraken
 
     sshpass
     polybar
