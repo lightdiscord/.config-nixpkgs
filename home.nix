@@ -12,67 +12,41 @@ let
       sha256 = "1hfcphcvdam62k983rm6r42mnkih4nfwyrnx0v88z3nw14mjr4c3";
     };
   });
-  discord = pkgs.lib.overrideDerivation pkgs.discord (old: {
-    version = "0.0.3";
-    name = "discord-0.0.3";
-    src = pkgs.fetchurl {
-      url = "https://dl.discordapp.net/apps/linux/0.0.3/discord-0.0.3.tar.gz";
-      sha256 = "1yxxy9q75zlgk1b4winw4zy9yxk5pn8x4camh52n6v3mw6gq0bfh";
-    };
-  });
+  sysconfig = (import <nixpkgs/nixos> {}).config;
 in
 {
-  home.packages = with pkgs; [
+  home.packages = with pkgs; ([
     neovim
     htop
     tmux
-
-    # Git
     git
     gitAndTools.gitflow
-    gitkraken
-
     sshpass
-    polybar
-    rofi
     fortune
-    vscode
-    discord
-    tdesktop
     ponysay
     wget
-    i3lock
-
-    # Medias
-    vlc
-
-    # Terminal
-    hyper
-    alacritty
-
-    # Documentation
     tldr
-
-    # Compilers & Runtimes
     rustup
     nodejs-9_x
     gcc
     python3
     python2
     gnumake
-
     unzip
     unrar
+    editorconfig-core-c
+  ] ++ pkgs.lib.optionals sysconfig.services.xserver.enable [
+    vscode
+    discord
+    tdesktop
+    polybar
+    rofi
+    i3lock
+    vlc
+    hyper
+    alacritty
+    gitkraken
     pavucontrol
-    
-    # Browsers
-    firefox-devedition-bin
-    chromium
-    tor
-    torsocks
-    tor-arm
-    tor-browser-bundle-bin
-
     compton
     lxappearance
     psmisc
@@ -82,12 +56,15 @@ in
     openh264
     x264
     flashplayer
-    editorconfig-core-c
-
-    # Image editor
+    firefox-devedition-bin
+    chromium
+    tor
+    torsocks
+    tor-arm
+    tor-browser-bundle-bin
     gimp
     inkscape
-  ];
+  ]);
 
   gtk = import ./programs-config/gtk.nix { inherit pkgs; };
 
