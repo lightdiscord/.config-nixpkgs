@@ -16,6 +16,13 @@ let
   sysconfig = (import <nixpkgs/nixos> {}).config;
 in
 {
+  imports = [
+    ./programs-config/git.nix
+    ./programs-config/gtk.nix
+    ./programs-config/home-manager.nix
+    ./services-config/gpg-agent.nix
+  ];
+
   home.packages = with pkgs; ([
     neovim
     htop
@@ -64,15 +71,4 @@ in
     gimp
     inkscape
   ]);
-
-  gtk = import ./programs-config/gtk.nix { inherit pkgs; };
-
-  programs.git = import ./programs-config/git.nix;
-
-  services.gpg-agent = import ./services-config/gpg-agent.nix;
-
-  programs.home-manager = {
-    enable = true;
-    path = "https://github.com/rycee/home-manager/archive/master.tar.gz";
-  };
 }
